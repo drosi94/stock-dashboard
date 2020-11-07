@@ -1,9 +1,10 @@
 import React from 'react';
-import './App.css';
+
+import classes from './App.module.css';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <span>Test</span>
     </div>
   );
