@@ -1,3 +1,8 @@
+:root {
+  --bg-color: #323232;
+  --primary-color: #316a6d;
+}
+
 html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -7,6 +12,8 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 1.6rem;
   line-height: 1.5;
+  color: #fff;
+  background-color: var(--bg-color);
 }
 
 * {
@@ -17,4 +24,11 @@ body {
 *::before,
 *::after {
   box-sizing: inherit;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  overflow: hidden;
 }

@@ -1,16 +1,20 @@
 import React from 'react';
 import { Provider as ReduxProvider } from 'react-redux';
 
-import classes from './App.module.css';
+import classes from './styles.module.css';
 
 import store from '../../../State/store';
+
+import DashboardPage from '../../Pages/DashboardPage';
+import Header from '../Header';
 
 function App() {
   return (
     <ReduxProvider store={store}>
-      <div>
-        <span>Test</span>
-      </div>
+      <Header />
+      <main className={classes.container}>
+        <DashboardPage />
+      </main>
     </ReduxProvider>
   );
 }
