@@ -7,7 +7,7 @@ export const getStockDailyData = createSelector(
   stockDailyState,
   (stockDailyState) => {
     const { data } = stockDailyState;
-    return data;
+    return data.length > 60 ? data.slice(0, 60) : data;
   }
 );
 
