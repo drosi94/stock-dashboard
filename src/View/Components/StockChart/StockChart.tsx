@@ -43,10 +43,16 @@ function StockChart() {
     ],
   };
 
+  const containerProps = {
+    height: '450px',
+    margin: 'auto',
+    width: '36%',
+  };
+
   return isLoading ? (
     <Loader />
   ) : Object.keys(dailyStocks).length > 0 ? (
-    <CanvasJSChart options={options} />
+    <CanvasJSChart containerProps={containerProps} options={options} />
   ) : null;
 }
 
