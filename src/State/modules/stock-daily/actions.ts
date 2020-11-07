@@ -14,11 +14,9 @@ export const fetchDailyStocksBySymbol = (stock: string) => (
       const data: Types.DailyStockResponse[] = await Service.fetchTimeSeriesDaily(
         stock
       );
-      console.log('STOCK_DAILY_SUCCESS', data);
       dispatch({ type: Types.STOCK_DAILY_SUCCESS, data: data });
       resolve(data);
     } catch (error) {
-      console.log('STOCK_DAILY_FAILURE', error);
       dispatch({ type: Types.STOCK_DAILY_FAILURE, error: error });
       reject(error);
     }
